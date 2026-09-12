@@ -44,5 +44,3 @@ streamlit run app.py
 Run `schema.sql` in MySQL.
 
 Create the `my_industry` database and `products` table in MySQL before running the application.
-
-Do not commit real database passwords to GitHub.
