@@ -5,6 +5,10 @@ import os
 import streamlit as st
 import pymysql as sql
 from streamlit_option_menu import option_menu
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 try:
     DB = sql.connect(
