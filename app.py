@@ -106,7 +106,14 @@ elif menu == "Update" :
         UnitsOnOrder = st.text_input("Enter Units on Order", value = Record['unitsonorder'])
         ReorderLevel = st.text_input("Enter Reorder Level", value = Record['reorderlevel'])
         Discountinued = st.text_input("Enter Discountinued", value = Record['discontinued'])
-        MFG = st.date_input("Enter MFG", value = Record['mfgdate'])
+        # MFG = st.date_input("Enter MFG", value = Record['mfgdate'])
+
+        from datetime import datetime
+
+        MFG = st.date_input(
+            "Enter MFG",
+            value=datetime.strptime(Record['mfgdate'],  "%Y/%m/%d").date()
+        )
 
         if  st.button("Submit") :
             try :
